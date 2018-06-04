@@ -1,5 +1,5 @@
 <?php
-// check domain max
+// check domain mx
 // 04062018: nawawi
 
 ( php_sapi_name() === 'cli' ) || exit;
