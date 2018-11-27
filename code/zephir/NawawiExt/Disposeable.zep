@@ -1,7 +1,7 @@
 namespace NawawiExt;
 
 final class Disposeable {
-    public static array list = [
+    public static list = [
         "027168.com",
         "0815.ru",
         "0815.su",
