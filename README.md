@@ -4,7 +4,7 @@ List of Disposable Email domain
 
 ## Maintaining List
 1. Append new domain into list-raw.txt
-2. Sorting duplicate file in list-raw.txt
+2. Sorting duplicate domain in the list-raw.txt
 ```console
 $ sort -u list-raw.txt > list-raw.temp && mv list-raw.temp list-raw.txt
 ```
