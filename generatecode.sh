@@ -44,7 +44,7 @@ cat <<_EOF_ >./code/zephir/NawawiExt/Disposeable.zep;
 namespace NawawiExt;
 
 final class Disposeable {
-    public static array list = [
+    public static list = [
 $(cat $FOUT)
     ];
 
