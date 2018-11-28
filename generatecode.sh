@@ -18,6 +18,7 @@ done < $FIN > $FOUT;
 LASTLINE="$(tail -n1 $FOUT |tr -d ',')";
 sed -i -e "s/${LASTLINE},/${LASTLINE}/g" $FOUT;
 
+# php lang
 mkdir -p ./code/php/NawawiExt;
 cat <<_EOF_ >./code/php/NawawiExt/Disposeable.php;
 <?php
@@ -39,8 +40,9 @@ $(cat $FOUT)
 }
 _EOF_
 
-mkdir -p ./code/zephir/NawawiExt;
-cat <<_EOF_ >./code/zephir/NawawiExt/Disposeable.zep;
+# zephir lang
+mkdir -p ./code/zephir/nawawiext;
+cat <<_EOF_ >./code/zephir/nawawiext/disposeable.zep;
 namespace NawawiExt;
 
 final class Disposeable {
@@ -63,6 +65,7 @@ $(cat $FOUT)
 }
 _EOF_
 
+# json format
 mkdir -p ./code/json;
 cat <<_EOF_ >./code/json/Disposeable.json;
 [
@@ -70,6 +73,7 @@ $(cat $FOUT |sed -e 's/^    //g')
 ]
 _EOF_
 
+# xml format
 mkdir -p ./code/xml;
 cat <<_EOF_ >./code/xml/Disposeable.xml;
 <?xml version="1.0" encoding="UTF-8"?>
